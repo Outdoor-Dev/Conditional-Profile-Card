@@ -26,7 +26,12 @@ function render(variables = {}) {
   console.log("These are the current variables: ", variables); //print on the console
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
-  let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
+  let cover = `<div class="cover"><video controls autoplay loop
+							src="${variables.background}"
+							
+							type="video/mp4">
+							Your browser does not support the video tag.
+						</video> </div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
   if (variables.name == null) variables.name = "NAME";
   if (variables.lastname == null) variables.lastname = "";
@@ -59,9 +64,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://v.ftcdn.net/02/92/14/70/700_F_292147064_2XHPdboLnApQG25EsqaV9UQL6JFdu6zn_ST.mp4",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://media-exp1.licdn.com/dms/image/C4D03AQEelSnb9eNM8Q/profile-displayphoto-shrink_400_400/0/1600480263830?e=1613001600&v=beta&t=J1zVzNPzzHZ2g1R8s-WuU-4LMGEfFnAYlUHErRoBnKw",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
