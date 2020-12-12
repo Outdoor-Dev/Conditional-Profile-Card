@@ -60,6 +60,7 @@
   h3 {
     display: block;
     margin: 10px 0;
+    margin-left: 5px;
 
     text-align: center;
     font-family: "Open Sans", sans-serif;
@@ -79,7 +80,7 @@
   }
   ul {
     position: absolute;
-    top: 20px;
+    top: -16px;
     &.position-left {
       left: -26px;
     }
@@ -87,20 +88,27 @@
       right: -27px;
     }
     padding: 0;
-    background: #2cdfd3;
+    background: black;
+
     li {
       list-style: none;
+      padding-bottom: 60px;
+      font-size: 50px;
       a {
         display: block;
-        padding: 5px 6px;
+        padding-top: 20px;
+
         color: #fff;
         cursor: pointer;
         text-align: center;
-        border-bottom: 1px solid #2cd5ca;
+        border-bottom: 1px solid white;
+
         transition: background-color 0.3s;
+        height: 70px;
+        width: 50px;
       }
       &:hover > a {
-        background-color: #2cd5ca;
+        background-color: black;
       }
       &:first-child > a {
         border-radius: 0 3px 0 0;
